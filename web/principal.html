@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Videojuegos</title>
+    <link href="../CSS/style.css" rel="stylesheet" >
+    <link href="../CSS/header.css" rel="stylesheet" >
+    <link href="../CSS/carrito.css" rel="stylesheet">
+    <link href="../CSS/detalle_compra.css" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn"><img src="../icons8-menú-16.png" alt="icono-menu"></label>
+    <div class="enlace"><img class="logo" src="../imagenes/digi.png" alt="logo-pagina"></div>
+    <div class="carrito">
+      <a href="#" id="cars"><img class="carritos" src="../imagenes/carrito.png" alt="carrito-compra"><span id="cuenta-carrito">0</span></a>
+      </div>
+
+
+    
+    <ul>
+
+      <li><a href="principal.html">Inicio</a></li>
+      <li><a href="#">nosotros</a></li>
+      <li><a href="#">Categorias</a></li>
+      <li id="inicio-sesion"><a href="login.html?form=login">Inicio Sesion</a></li>
+      <li id="registrate"><a href="login.html?form=registro">registrate</a></li>
+      <li><button id="cerrar-sesion" onclick="cerrarSesion()">Cerrar Sesión</button></li>
+      
+    </ul>
+  </nav>
+    
+    <video autoplay muted loop id="video-fondo">
+      <source src="../imagenes/fondos/god_of_war_video.mp4" type="video/mp4">
+      Tu navegador no soporta este formato de video.
+    </video>
+  
+    <section class="descripcion-1">
+  
+      <h2 class="titulo-bienvenida">BIENVENIDOS A LA TIENDA DE JUEGOS DIGITALES DIGIGAMES</h2>
+      <p>
+        Descubre un mundo de entretenimiento con nuestra amplia selección de
+        juegos digitales. Desde emocionantes aventuras hasta desafíos
+        estratégicos, en <b>DigiGames</b> encontrarás el juego perfecto para
+        cada tipo de jugador. Explora, elige y disfruta de la mejor experiencia de
+        gaming directamente desde la comodidad de tu hogar
+      </p>
+  </section>
+    <main>
+    <div class="todo" id="main-content"> 
+      <h1>Juegos más Vendidos PC</h1>
+        <div class="productos">
+            <div class="producto">
+              <img src="../imagenes/PC//EA+sport+25.webp" alt=" juego-Ea-Sport">
+                <h3>EA SPORT 25</h3>
+                <button onclick="fetchGameDescription(62)">Informacion</button><br>
+                
+                
+              </div>
+              <div class="producto">
+                <img src="../imagenes/PC/space+marine.webp" alt=" juego-space-marine">
+                  <h3>SPACE MARINE</h3>
+                  <button onclick="fetchGameDescription(63)">Informacion</button><br>
+              </div>
+
+                <div class="producto">
+                  <img src="../imagenes/PC/dragon_age_4.webp" alt=" juego-gragon-age">
+                    <h3>DRAGON AGE 4</h3>
+                    <button onclick="fetchGameDescription(61)">Informacion</button><br>
+                    
+                </div>
+                  <div class="producto">
+                    <img src="../imagenes/PC/grand+theft+auto.webp" alt=" juego-gta-5">
+                    <h3>GTA 6</h3>
+                    <button onclick="fetchGameDescription(64)">Informacion</button><br>
+                  </div>
+          </div>
+          <div class="boton_catalogo">
+            <button onclick="fetchGames(4)">Catalogo</button>
+            
+            </div>
+        <h1>Juegos más Vendidos PS3</h1>
+        <div class="productos">
+            <div class="producto">
+              <img src="../imagenes/PLAY-3/GOD-OF-WAR.jpg" alt=" juego-god-of-war">
+                <h3>GOD OF WAR III</h3>
+                <button onclick="fetchGameDescription(1)">Informacion</button><br>
+                
+               
+          </div>
+          <div class="producto"><img src="../imagenes/PLAY-3/NFL-16.jpg" alt=" juego-nfl-16">
+            <h3>MADDEN NFL 16</h3>
+            <button onclick="fetchGameDescription(2)">Informacion</button><br>
+            
+            
+          </div>
+          <div class="producto"><img class="imagen3" src="../imagenes/PLAY-3/WRC-5.jpg" alt=" juego-wrc-5">
+            <h3>WRC 5</h3>
+            <button class="informacion" onclick="fetchGameDescription(3)">Informacion</button><br>
+            
+            
+          </div>
+          <div class="producto"><img class="imagen4" src="../imagenes/PLAY-3/CALL-OF-DUTY.jpg" alt=" juego-call-of-dutty">
+          <h3>CALL OF DUTY</h3>
+          <button class="informacion" onclick="fetchGameDescription(4)">Informacion</button><br>
+          
+            
+          </div>
+        </div>
+        <div class="boton_catalogo">
+          <button onclick="fetchGames(1)">Ver Catalogo</button>
+          </div>
+          <h1>Juegos más Vendidos PS4</h1>
+        <div class="productos">
+          <div class="producto"><img src="../imagenes/PLAY-4/FIFA-19-PLAY-4.jpg" alt=" juego-fifa-19">
+              <h3>FIFA 19 </h3><br>
+              <button onclick="fetchGameDescription(38)">Informacion</button><br>
+              
+            
+        </div>
+        <div class="producto"><img src="../imagenes/PLAY-4/DRAGON-BALL-Z-PLAY-4.jpg" alt=" juego-dragon-ball">
+          <h3>DRAGON BALL Z </h3><br>
+          <button onclick="fetchGameDescription(34)">Informacion</button>
+             
+           
+        </div>
+        <div class="producto"><img src="../imagenes/PLAY-4/GOD-OF-WAR-RAGNAROK-PLAY-4.jpg" alt=" juego-ragnarok">
+          <h3>GOD OF WAR RAGNAROK </h3>
+          <button onclick="fetchGameDescription(27)">Informacion</button>
+              
+           
+        </div>
+        <div class="producto"><img src="../imagenes/PLAY-4/PLANTS-VS-ZOMBIES-PLAY-4.jpg" alt=" juego-plant-vs-zombies">
+        <h3>PLANTS VS ZOMBIES </h3>
+        <button onclick="fetchGameDescription(40)">Informacion</button>
+              
+            
+        </div>
+      </div>
+      <div class="boton_catalogo">
+        <button onclick="fetchGames(2)">Ver Catalogo</button>
+        </div>
+       <h1>Juegos Mas Vendidos Xbox 360</h1>
+        <div class="productos">
+          <div class="producto"><img src="../imagenes/XBOX/GEARS-OF-WAR-3.jpg" alt=" juego-gears-of-war">
+              <h3>GEARS OF WAR 3</h3>
+              <button onclick="fetchGameDescription(59)">Informacion</button>
+              
+           
+        </div>
+        <div class="producto"><img src="../imagenes/XBOX/FALLOUT-3.jpg" alt=" juego-fallout-3">
+          <h3>FALLOUT 3</h3>
+          <button onclick="fetchGameDescription(41)">Informacion</button>
+              
+            
+        </div>
+        <div class="producto"><img src="../imagenes/XBOX/ASSASSINS-CREED-ROGUE.jpg" alt=" juego-assassing-creed">
+          <h3>ASSASSINS CREED</h3>
+          <button onclick="fetchGameDescription(52)">Informacion</button>
+              
+            
+        </div>
+        <div class="producto"><img src="../imagenes/XBOX/GAME-OF-TRONES.jpg" alt=" juego-game-of-trone">
+        <h3>GAME OF TRONES</h3>
+        <button onclick="fetchGameDescription(48)">Informacion</button>
+              
+            <div class="descripcion" id="descripcion-48"></div>
+        </div>
+      </div>
+      <div class="boton_catalogo">
+        <button onclick="fetchGames(3)">Ver Catalogo</button>
+        </div>
+      </div>
+
+    <div id="cart-panel" class="cart-panel">
+    <div class="cart-header">
+        <h2>Mi carrito de compras</h2>
+        <span id="close-cart" class="close-btn">&times;</span>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-footer">
+        
+        <h3>Total: <span id="cart-total">0 Bs</span></h3>
+        <button id="view-cart" class="btn" onclick="verPedidos()">Ver Pedidos</button>
+        <button id="checkout" class="btn" onclick="isAuthenticated()">Comprar ahora</button>
+    </div>
+</div>
+      
+  </main>
+    
+     
+      <script src="/api/descripcion.js"></script>
+      <script src="/Scripts/form.js"></script>
+      <script src="/Scripts/carrito.js"></script>
+      <script src="/Scripts/pedido.js"></script>
+      
+       
+</body>
+</html>

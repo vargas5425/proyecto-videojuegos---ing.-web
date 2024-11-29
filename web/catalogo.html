@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogo</title>
+  <link rel="stylesheet" href="../CSS/header.css">
+  <link rel="stylesheet" href="../CSS/catalogo.css">
+  <link rel="stylesheet" href="../CSS/carrito.css">
+    
+    
+</head>
+<body>
+    
+  <nav>
+  <input type="checkbox" id="check">
+  <label for="check" class="checkbtn"><img src="../icons8-menú-16.png" alt="icono-menu"></label>
+  <div class="enlace"><img class="logo" src="../imagenes/digi.png" alt="logo-pagina"></div>
+      <div class="carrito">
+      <a href="#" id="cars"><img class="carritos" src="../imagenes/carrito.png" alt="carrito-compra"><span id="cuenta-carrito">0</span></a>
+      </div>
+      <ul>
+        <li><a href="principal.html">Inicio</a></li>
+        <li><a href="#">nosotros</a></li>
+        <li><a href="#">Categorias</a></li>
+        <li id="inicio-sesion"><a href="login.html?form=login">Inicio Sesion</a></li>
+        <li id="registrate"><a href="login.html?form=registro">registrate</a></li>
+        <li><button id="cerrar-sesion" onclick="cerrarSesion()">Cerrar Sesión</button></li>
+      </ul>
+  </nav>
+
+    <main class=" main-container">
+      <p id="games-container" ></p>
+    
+      <div id="cart-panel" class="cart-panel">
+      <div class="cart-header">
+          <h2>Mi carrito de compras</h2>
+          <span id="close-cart" class="close-btn">&times;</span>
+      </div>
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-footer">
+        <!-- <p>Tarifa de servicio: <span id="service-fee">0 Bs</span></p>--> 
+          <h3>Total: <span id="cart-total">0 Bs</span></h3>
+          <button id="view-cart" class="btn" onclick="verPedidos()">Ver Pedidos</button>
+          <button id="checkout" class="btn" onclick="isAuthenticated()">Comprar ahora</button>
+      </div>
+      </div>
+
+    </main>
+
+    
+      <script src="../Scripts/catalogo.js"></script>
+      <script src="../api/descripcion.js"></script>
+      <script src="../Scripts/form.js"></script>
+      <script src="../Scripts/carrito.js"></script>
+      <script src="../Scripts/pedido.js"></script>
+    
+</body>
+</html>

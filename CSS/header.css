@@ -1,0 +1,125 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+nav{
+    background-color: aquamarine;
+    height: 40px;
+    width: 100%;
+}
+.carrito{
+    float: right;
+    margin-top: 4px;
+    margin-right: 20px;
+}
+
+nav .carritos{
+    height: 30px;
+}
+
+#cuenta-carrito{
+    background-color: coral;
+    border-radius: 100%;
+    display: inline-block;
+    width: 20px;
+    line-height: 20px;
+    aspect-ratio: 1;
+    text-align: center;
+
+}
+#cerrar-sesiones{
+    width: 30px;
+}
+.enlace{
+    position: absolute;
+    padding: 10px 50px; 
+}
+.logo{
+    border-radius: 5px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 40px;
+    margin: 0 5px;
+}
+nav ul li a{
+    padding: 7px 13px;
+    color: #000000;
+    font-weight: 700;
+}
+.checkbtn{
+    float: right;
+    font-size: 20px;
+    line-height: 40px; 
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+button {
+    background-color: #d62828;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    
+}
+
+button:hover {
+    background-color: #bb2525;
+}
+
+
+
+@media(max-width:952px){
+.enlace{
+    padding-left: 20px;
+}
+
+nav ul li a{
+    font-size: 14px;
+    color: blue;
+    
+}
+}
+
+
+@media(max-width:830px){
+.checkbtn{
+    display: block;
+}
+ul{
+    position:fixed;
+    width: 20%;
+    height: 50vh;
+    background: #90a7bf;
+    top: 90px;
+    left: -100%;
+    transition: all .5s;
+    z-index: 2;
+
+}
+nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+
+}
+nav ul li a{
+    font-size: 20px;
+}
+#check:checked ~ ul{
+    left: 0;
+}
+}

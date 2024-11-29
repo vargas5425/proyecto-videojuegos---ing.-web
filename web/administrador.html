@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+    <link href="../CSS/header.css" rel="stylesheet">
+    <link href="../CSS/administrador.css" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-links">
+            <div class="tienda">
+                Mi Tienda
+            </div>
+            <a href="administrador.html">Productos</a>
+            <a href="#" id="clientesButton">Clientes</a>
+            <a href="#" id="inicio-sesion"></a>
+            <a href="#" id="registrate"></a>
+        </div>
+        <select id="categoria-admin">
+            <option value="1">PS3</option>
+            <option value="2">PS4</option>
+            <option value="3">Xbox</option>
+            <option value="4">PC</option>
+        </select>
+        <div class="img-button">
+            <button id="cerrar-sesion" onclick="cerrarSesion()">Cerrar Sesión</button>
+            <img class="rostro-login" src="../rostro.png" alt="logo-defecto">
+        </div>
+    </div>
+    <div class="container">
+        <h2>Productos</h2>
+        <button class="add-product-btn">Agregar Producto</button>
+    </div>
+
+    <main>
+        <section class="vista">
+            <h2 class="oculto">Vista de Tabla</h2>
+            <table id="tabla-juegos">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre del Juego</th>
+                        <th>Imagen</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Las filas se llenarán desde la base de datos -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    
+    <script src="../Scripts/administrador.js"></script>
+    <script src="../Scripts/form.js"></script>
+    <script src="../api/descripcion.js"></script>
+</body>
+</html>

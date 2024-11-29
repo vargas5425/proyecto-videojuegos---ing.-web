@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Pedidos</title>
+   
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/carrito.css">
+    <link rel="stylesheet" href="../CSS/detalle_compra.css">
+</head>
+
+<body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn"><img src="../icons8-menú-16.png" alt="icono-menu"></label>
+    <div class="enlace"><img class="logo" src="../imagenes/digi.png" alt="logo-pagina"></div>
+    
+    <ul>
+      <li><a href="principal.html">Inicio</a></li>
+      <li><a href="#">nosotros</a></li>
+      <li><a href="#">Categorias</a></li>
+      <li id="inicio-sesion"><a href="login.html?form=login">Inicio Sesion</a></li>
+      <li id="registrate"><a href="login.html?form=registro">registrate</a></li>
+      <li><button id="cerrar-sesion" onclick="cerrarSesion()">Cerrar Sesión</button></li>
+    </ul>
+  </nav>
+  
+  <main class="main-container">
+
+    <h2>Mis Pedidos</h2>
+    <img class="gif" src="../descarga.png" alt="logo-salir" onclick="goBack()">
+    <div id="pedido-lista">
+
+    </div>
+
+  </main>
+  <script src="../Scripts/form.js"></script>
+  <script src="../Scripts/pedidos.js"></script>
+  <script src="../api/descripcion.js"></script>
+</body>
+</html>
